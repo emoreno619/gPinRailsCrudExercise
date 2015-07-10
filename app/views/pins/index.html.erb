@@ -1,0 +1,11 @@
+<h1>All the pins!!!</h1>
+<h2><a href="/pins/new">Add a new pin!</a></h2>
+<% @pins.each do |pin| %>
+
+	<% if pin.image %>
+	<p><img src="<%= pin.image %>" alt=""></p>
+	<% end %>
+	<p>Pin URL: <%= pin.url %></p>
+	<p>Comment: <%= pin.comment %></p>
+
+<% end %>
