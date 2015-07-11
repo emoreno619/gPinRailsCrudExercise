@@ -6,7 +6,7 @@ Create a rails app that allows you to do full CRUD on a pin.  A pin is simply de
 
 * Avoid using link_to whenever possible (adding a destroy link should be the only exception).  Link_to is great, but it's important to understand what you're doing first
 * Add a nav bar to all pages that lets you get around more easily.
-* Every pin on index page should be a link to the page.  Or contain a link to the show page next to it.  The UI is up to you.
+* Every pin on index page should be a link to the pin's show page.  Or contain a link to the show page next to it.  The UI is up to you.
 * Add validations to your model.  Make sure that a url and a comment are present.  An image is optional.  Optionally, add any other validations that you think make sense.
 
 ### Bonus
