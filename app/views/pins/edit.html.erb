@@ -1,5 +1,9 @@
-<h1><a href="/pins">Home - See all the pins!</a></h1>
+
 <h2>Edit the '<%= @pin.url %>' pin</h2>
+
+<h3>Url: <%= @pin.url %></h3>
+<h3>Image: <img src="<%= @pin.image %>" ></h3>
+<p><h4>Comment:<%= @pin.comment %></h4></p>
 
 <%= form_for @pin do |f| %>
     <%= f.label "Url" %>
