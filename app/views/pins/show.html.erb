@@ -1,0 +1,5 @@
+<h1><a href="/pins">Home - See all the pins!</a></h1>
+<h2><%= @pin.url %></h2>
+<img src="<%= @pin.image %>" >
+<h3><%= @pin.comment %></h3>
+<%= link_to 'Destroy',  @pin,  method: :delete, data: { confirm: 'Are you sure?' } %>
