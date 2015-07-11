@@ -14,11 +14,16 @@ class PinsController < ApplicationController
 	end
 
 	def update
-		
+		# pp = pin_params
+		@pin = Pin.find(params[:id])
+		@pin.update_attributes(pin_params)
+		redirect_to '/'
 	end
 
 	def edit
-		
+		# Why is 'dirty data' of 'params[:id]' permitted in cases of edit, show, destroy
+		# but not permitted in cases of create?
+		@pin = Pin.find_by_id(params[:id])
 	end
 
 	def show

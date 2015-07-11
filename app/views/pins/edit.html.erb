@@ -1,0 +1,12 @@
+<h1><a href="/pins">Home - See all the pins!</a></h1>
+<h2>Edit the '<%= @pin.url %>' pin</h2>
+
+<%= form_for @pin do |f| %>
+    <%= f.label "Url" %>
+    <%= f.text_field :url %><br />
+    <%= f.label "Image Url" %>
+    <%= f.text_field :image %><br />
+    <%= f.label "Comment" %>
+    <%= f.text_field :comment %><br />
+    <%= f.submit "Edit this Pin" %>
+<% end %>
