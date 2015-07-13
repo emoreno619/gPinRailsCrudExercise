@@ -5,19 +5,32 @@ class PinsController < ApplicationController
 	end
 
 	def create
-		Pin.create(pin_params)
-		redirect_to '/'
+		# Pin.create(pin_params) 
+
+		# Use new and save instead of create!
+		@pin = Pin.new(pin_params)
+		if @pin.save
+			redirect_to '/'
+		else
+			render :new
+		end
 	end
 
 	def new
 		@pin = Pin.new
+
 	end
 
 	def update
 		# pp = pin_params
 		@pin = Pin.find(params[:id])
-		@pin.update_attributes(pin_params)
-		redirect_to '/'
+		
+		if @pin.update_attributes(pin_params)
+			redirect_to '/'
+		else
+			render :edit
+		end
+		
 	end
 
 	def edit
