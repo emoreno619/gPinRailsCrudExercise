@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Should include secrets.yml when it contains secrets...
