@@ -1,9 +1,12 @@
 <h1>All the pins!!!</h1>
 <% @pins.each do |pin| %>
-
+	<div>
 	<% if pin.image %>
 	<p><img src="<%= pin.image %>" alt=""></p>
 	<% end %>
+	<% if pin.url =~ /\A#{URI::regexp(['http', 'https'])}\z/ %>
+		<p><iframe width="300" height="200" src="<%= pin.url%>" frameborder="0"></iframe></p>
+	<% end %>
 	<p><h4><a href="/pins/	<%= pin.id %>">	<%= pin.url %></a></h4></p>
-
+	</div>
 <% end %>
