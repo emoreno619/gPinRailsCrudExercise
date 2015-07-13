@@ -11,5 +11,5 @@ Create a rails app that allows you to do full CRUD on a pin.  A pin is simply de
 
 ### Bonus
 * Investigate partials.  Use a partial for the nav bar instead of copying it to every page.  Also try using a partial for the new page and the edit page.  They are very similar
-* Make the index page a little more interested.  Instead of showing an image, remove the image from your table and show the page that is being linked in an iframe.
+* Make the index page a little more interesting.  Instead of showing an image, remove the image from your table and show the page that is being linked in an iframe.
 * Add javascript and css.  Style the page and make it a little more dynamic.
