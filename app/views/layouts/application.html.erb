@@ -7,11 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <nav>
 	<h1><a href="/pins">Home - See all the pins!</a></h1>
 	<h2><a href="/pins/new">Add a new pin!</a></h2>
 </nav>
+
+
+<!-- bootstrap can be included here or via a gem -->
+
+<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- lets get fancy -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/lumen/bootstrap.min.css">
+
+<% flash.each do |key, value| %>
+  <% if key == "notice" %>
+    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
+  <% elsif key == "alert" %>
+    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+  <% else %>
+    <%= content_tag :div, value, class: "text-center alert alert-success" %>
+  <% end %>
+<% end %>
+
+
 <%= yield %>
+
+
 
 </body>
 </html>

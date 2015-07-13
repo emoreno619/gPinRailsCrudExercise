@@ -25,8 +25,14 @@ class PinsController < ApplicationController
 		# pp = pin_params
 		@pin = Pin.find(params[:id])
 		
+		# one way to specify custom flash
+		# flash[:success] = "Update successful!"
+
+		# another way to specify custom flash
+		# redirect_to '/', flash: {success: "We updated!"}
+
 		if @pin.update_attributes(pin_params)
-			redirect_to '/'
+			redirect_to '/', flash: {success: "We updated!"}
 		else
 			render :edit
 		end
@@ -47,7 +53,7 @@ class PinsController < ApplicationController
 		@pin = Pin.find(params[:id])
 		
 		@pin.destroy
-		redirect_to '/'
+		redirect_to '/', notice: "Deletion successful!"
 	end
 
 	private 
