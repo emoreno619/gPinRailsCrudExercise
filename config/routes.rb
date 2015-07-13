@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/pins/:id/edit', to: 'pins#edit'
   get '/pins/:id', to: 'pins#show', as: 'pin'
   delete '/pins/:id', to: 'pins#destroy'
+# USE THIS TO BUILD ALL OF THE ABOVE ROUTES: 'resources :authors'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
